@@ -4,12 +4,8 @@ WORKDIR /app
 
 COPY package*.json ./
 RUN npm ci
-
 COPY . .
 RUN npm run build
+RUN npm install -g serve
 
-RUN npm install -g http-server
-
-EXPOSE 8080
-
-CMD ["http-server", "dist/medical-consultations-frontend", "-p", "8080", "-c-1", "--proxy", "http://localhost:8080?"]
+CMD sh -c "serve -s dist/medical-consultations-frontend -l ${PORT:-8080}"

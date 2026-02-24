@@ -1,5 +1,0 @@
-[phases.build]
-cmds = ["npm ci", "npm run build"]
-
-[start]
-cmd = "npx serve -s dist/medical-consultations-frontend -l $PORT"

@@ -12,4 +12,4 @@ RUN npm install -g serve
 
 EXPOSE 8080
 
-CMD ["serve", "-s", "dist/medical-consultations-frontend/browser", "-l", "8080"]
+CMD ["serve", "-s", "dist/medical-consultations-frontend", "-l", "8080"]
